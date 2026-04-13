@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "build": "vite build --base=/Weather-Dashboard/"
+    "build": "vite build --base=/Weather-Dashboard/"
     "preview": "vite preview",
     "acp": "git add --all && git commit -m \"update\" && git push"
   },

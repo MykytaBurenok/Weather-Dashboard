@@ -2,30 +2,181 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script type="module" crossorigin src="/Weather-Dashboard/assets/index-DDNfQdaA.js"></script>
+    <meta
+      name="description"
+      content="Weather Dashboard portfolio project built with Vite and vanilla JavaScript"
+    />
+    <title>Weather Dashboard</title>
+    <script type="module" crossorigin src="/Weather-Dashboard/assets/index-D0a7q5zr.js"></script>
+    <link rel="stylesheet" crossorigin href="/Weather-Dashboard/assets/index-7lyc-INj.css">
   </head>
   <body>
-    <main>
-      <form class="form">
-        <label>
-          <input
-            type="text"
-            name="search-text"
-            placeholder="Search images..."
-            required
-          />
-        </label>
-        <button type="submit">Search</button>
-      </form>
+    <div id="app">
+      <div class="page">
+        <header class="header">
+          <div class="container header__inner">
+            <div class="brand">
+              <p class="brand__eyebrow">Portfolio project</p>
+              <h1 class="brand__title">Weather Dashboard</h1>
+              <p class="brand__subtitle">
+                Search any city and view current, hourly, and 7-day forecast
+                data.
+              </p>
+            </div>
 
-      <div class="loader is-hidden"></div>
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle theme"
+            >
+              🌙
+            </button>
+          </div>
+        </header>
 
-      <ul class="gallery"></ul>
-    </main>
+        <main class="main">
+          <div class="container dashboard">
+            <section class="search card" aria-labelledby="search-title">
+              <h2 id="search-title" class="section-title">Search weather</h2>
 
+              <form class="search-form" id="search-form">
+                <label class="search-form__label" for="city-input">City</label>
+
+                <div class="search-form__row">
+                  <input
+                    class="search-form__input"
+                    id="city-input"
+                    name="city"
+                    type="text"
+                    placeholder="Enter city name"
+                    autocomplete="off"
+                    required
+                  />
+
+                  <button class="button button--primary" type="submit">
+                    Search
+                  </button>
+                </div>
+              </form>
+
+              <button
+                class="button button--secondary location-button"
+                type="button"
+                id="location-button"
+              >
+                Use my location
+              </button>
+
+              <p class="status-message" id="status-message">
+                Search for a city to display forecast data.
+              </p>
+            </section>
+
+            <section
+              class="current-weather card"
+              aria-labelledby="current-title"
+            >
+              <div class="card-head">
+                <h2 id="current-title" class="section-title">
+                  Current weather
+                </h2>
+                <span class="badge" id="current-time">--:--</span>
+              </div>
+
+              <div class="current-weather__content">
+                <div class="current-weather__main">
+                  <p class="current-weather__city" id="city-name">City name</p>
+                  <p class="current-weather__temp" id="current-temp">--°</p>
+                  <p class="current-weather__desc" id="current-desc">
+                    Weather description
+                  </p>
+                </div>
+
+                <div class="current-weather__meta">
+                  <div class="meta-item">
+                    <span class="meta-item__label">Feels like</span>
+                    <span class="meta-item__value" id="feels-like">--°</span>
+                  </div>
+
+                  <div class="meta-item">
+                    <span class="meta-item__label">Wind</span>
+                    <span class="meta-item__value" id="wind-speed"
+                      >-- km/h</span
+                    >
+                  </div>
+
+                  <div class="meta-item">
+                    <span class="meta-item__label">Humidity</span>
+                    <span class="meta-item__value" id="humidity">--%</span>
+                  </div>
+
+                  <div class="meta-item">
+                    <span class="meta-item__label">Coordinates</span>
+                    <span class="meta-item__value" id="coordinates"
+                      >--, --</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="hourly-weather card" aria-labelledby="hourly-title">
+              <div class="card-head">
+                <h2 id="hourly-title" class="section-title">Hourly forecast</h2>
+              </div>
+
+              <ul class="hourly-list" id="hourly-list">
+                <li class="hourly-item">
+                  <span class="hourly-item__time">--:--</span>
+                  <span class="hourly-item__icon">⛅</span>
+                  <span class="hourly-item__temp">--°</span>
+                </li>
+                <li class="hourly-item">
+                  <span class="hourly-item__time">--:--</span>
+                  <span class="hourly-item__icon">⛅</span>
+                  <span class="hourly-item__temp">--°</span>
+                </li>
+                <li class="hourly-item">
+                  <span class="hourly-item__time">--:--</span>
+                  <span class="hourly-item__icon">⛅</span>
+                  <span class="hourly-item__temp">--°</span>
+                </li>
+                <li class="hourly-item">
+                  <span class="hourly-item__time">--:--</span>
+                  <span class="hourly-item__icon">⛅</span>
+                  <span class="hourly-item__temp">--°</span>
+                </li>
+              </ul>
+            </section>
+
+            <section class="daily-weather card" aria-labelledby="daily-title">
+              <div class="card-head">
+                <h2 id="daily-title" class="section-title">7-day forecast</h2>
+              </div>
+
+              <ul class="daily-list" id="daily-list">
+                <li class="daily-item">
+                  <span class="daily-item__day">Mon</span>
+                  <span class="daily-item__icon">☀️</span>
+                  <span class="daily-item__range">18° / 9°</span>
+                </li>
+                <li class="daily-item">
+                  <span class="daily-item__day">Tue</span>
+                  <span class="daily-item__icon">🌥️</span>
+                  <span class="daily-item__range">17° / 8°</span>
+                </li>
+                <li class="daily-item">
+                  <span class="daily-item__day">Wed</span>
+                  <span class="daily-item__icon">🌧️</span>
+                  <span class="daily-item__range">14° / 7°</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

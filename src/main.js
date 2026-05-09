@@ -95,7 +95,14 @@ function handleCurrentLocation() {
 }
 
 const themeToggleBtn = document.getElementById('theme-toggle');
-const savedTheme = localStorage.getItem('theme');
+
+let savedTheme = null;
+
+try {
+  savedTheme = localStorage.getItem('theme');
+} catch (error) {
+  savedTheme = null;
+}
 
 if (savedTheme) {
   document.documentElement.setAttribute('data-theme', savedTheme);
@@ -110,7 +117,10 @@ themeToggleBtn.addEventListener('click', () => {
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
   document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
+
+  try {
+    localStorage.setItem('theme', newTheme);
+  } catch (error) {}
 
   updateThemeButton();
 });

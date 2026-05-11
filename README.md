@@ -27,24 +27,7 @@ This project was built as a portfolio piece to practice working with real API da
 - Vite
 - Open-Meteo API
 
-## Project Structure
-```bash
-Weather-Dashboard/
-├── index.html
-├── package.json
-├── vite.config.js
-├── src/
-│   ├── main.js
-│   ├── styles.css
-│   ├── js/
-│   │   ├── api.js
-│   │   ├── helpers.js
-│   │   ├── refs.js
-│   │   └── render.js
-│   └── img/
-```
-
-## What I Practiced
+## What I was working on?
 - Fetching data from external APIs.
 - Working with geocoding and weather forecast endpoints.
 - Splitting app logic into small JavaScript modules.

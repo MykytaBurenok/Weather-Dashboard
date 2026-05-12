@@ -93,6 +93,8 @@ user-facing application.
 **Mykyta Burenok**  
 Junior Frontend Developer (Berlin)
 
-## Demo Preview
+## Live Preview
 
-![Demo](./gif/doc_2026-05-12_20-33-39_compressed.mp4)
+<p align="center">
+  <img src="./gif/doc_2026-05-12_20-33-39_compressed.mp4" width="900" />
+</p>

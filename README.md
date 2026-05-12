@@ -95,4 +95,4 @@ Junior Frontend Developer (Berlin)
 
 ## Demo Preview
 
-![Demo](./gif/doc_2026-05-12_20-33-39.mp4)
+![Demo](./gif/doc_2026-05-12_20-33-39_compressed.mp4)

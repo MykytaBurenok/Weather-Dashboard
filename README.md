@@ -8,6 +8,12 @@ lets users search for a city and view current conditions, hourly forecast, and
 
 [View the live project](https://mykytaburenok.github.io/Weather-Dashboard/)
 
+## Preview
+
+<p align="center">
+  <img src="./gif/Screenshot 2026-05-12 202726.png" width="900"/>
+</p>
+
 ## Repository
 
 [View the source code](https://github.com/MykytaBurenok/Weather-Dashboard)
@@ -96,5 +102,5 @@ Junior Frontend Developer (Berlin)
 ## Live Preview
 
 <p align="center">
-  <img src="./gif/doc_2026-05-12_20-33-39_compressed.mp4" width="900" />
+  <img src="./gif/demo.gif.gif" width="900" />
 </p>

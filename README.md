@@ -102,5 +102,5 @@ Junior Frontend Developer (Berlin)
 ## Live Preview
 
 <p align="center">
-  <img src="./gif/demo.gif.gif" width="900" />
+  <img src="./gif/demo.gif.gif" width="350" height="400"  />
 </p>
